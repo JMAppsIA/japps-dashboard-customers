@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const InputContainer = styled.div`
     position: relative;
 
+    @media (max-width: 535px) {
+        align-self: center;
+    }
+
 `;
 
 export const Input = styled.input`

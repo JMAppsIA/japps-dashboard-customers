@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BsEye, BsEyeSlash } from "react-icons/bs";
-
+import { useNavigate } from 'react-router-dom';
 import {
   Container,
   LeftSide,
@@ -17,7 +17,7 @@ import {
   ToggleContainer,
 } from "../../styled-components/SignIn";
 import { Text } from "../../styled-components/Text";
-import { Link } from "../../styled-components/Link";
+import { ClickableInfo } from "../../styled-components/Link";
 import backgroundImage from "../../assets/images/sign-in-background.png";
 import logoImage from "../../assets/images/logo.png";
 import { Button } from "../../styled-components/Button";
@@ -25,8 +25,10 @@ import FacebookIcon from "../../assets/images/social/facebook.svg";
 import GoogleIcon from "../../assets/images/social/google.svg";
 import TextInput from "../../styled-components/Input/TextInput";
 import Switch from "../../styled-components/Switch/Switch";
+import Card from "../../styled-components/Card/Card";
+import Colors from "../../constants/Colors";
 
-function SignIn() {
+function SignIn(props) {
   const [passwordShown, setPasswordShown] = React.useState(false);
   const [remembered, setRemembered] = useState(false);
 
@@ -46,7 +48,7 @@ function SignIn() {
           <SignUpContainer>
             <Text light>
               {`No tienes una cuenta? `}
-              <Link>{`Registrate!`}</Link>
+              <ClickableInfo to='/register'>{`Registrate!`}</ClickableInfo>
             </Text>
           </SignUpContainer>
         </Header>
@@ -76,7 +78,7 @@ function SignIn() {
             <InputsContainer>
               <TextInput
                 type="text"
-                style={{ marginBottom: "38px" }}
+                style={{ marginBottom: "28px" }}
                 placeholder={`Email`}
               />
               <TextInput
@@ -104,18 +106,21 @@ function SignIn() {
                 />
                 <Text regular h6 align={`center`} style={{marginLeft: 11.72}}>{`Recordarme`}</Text>
               </ToggleContainer>
-              <Link style={{paddingTop: 20}}>{`Olvidé mi contraseña`}</Link>
+              <ClickableInfo style={{paddingTop: 20}}>{`Olvidé mi contraseña`}</ClickableInfo>
             </RememberContainer>
+            <Button transparent hasHover hoverTextColor={Colors.white}><Text regular align={'center'}>{`Ingresar`}</Text></Button>
           </form>
         </Body>
         <Footer>
           <Text light>
             {`No tienes una cuenta? `}
-            <Link>{`Registrate!`}</Link>
+            <ClickableInfo to='/register'>{`Registrate!`}</ClickableInfo>
           </Text>
         </Footer>
       </LeftSide>
-      <RightSide hasBackground background={backgroundImage}></RightSide>
+      <RightSide hasBackground background={backgroundImage}> 
+        <Card glassed title={`👍 Mejores recursos, mejores soluciones`} description={`Creamos soluciones tecnológicas para los desafíos que enfrentan nuestros partners en su día a día.`}/>
+      </RightSide>
     </Container>
   );
 }

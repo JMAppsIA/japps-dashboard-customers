@@ -26,33 +26,6 @@ export const LeftSide = styled.div`
   flex-grow: 0;
   max-width: 100%;
   position: relative;
-  padding-top: 49px;
-  padding-left: 68.55px;
-  padding-right: 54px;
-
-  @media (min-width: 900px) {
-    flex-basis: 50%;
-    flex-grow: 0;
-    max-width: 50%;
-    background-color: #f0f2f5;
-    height: 100vh;
-  }
-
-  @media (max-width: 1024px) {
-    flex-basis: 100%;
-    flex-grow: 0;
-    max-width: 100%;
-  }
-`;
-
-export const RightSide = styled.div`
-  box-sizing: border-box;
-  margin: 0;
-  flex-direction: row;
-  flex-basis: 100%;
-  flex-grow: 0;
-  max-width: 100%;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,12 +34,11 @@ export const RightSide = styled.div`
     flex-basis: 50%;
     flex-grow: 0;
     max-width: 50%;
-    flex-direction: row;
-    height: 100vh;
   }
 
-  @media (max-width: 1024px) {
-    display: none;
+  @media (min-width: 900px) {
+    flex-direction: row;
+    height: 100vh;
   }
 
   ${({ hasBackground, background }) => {
@@ -84,6 +56,30 @@ export const RightSide = styled.div`
       }
     }
   }}
+`;
+
+export const RightSide = styled.div`
+
+box-sizing: border-box;
+  margin: 0;
+  flex-direction: row;
+  flex-basis: 100%;
+  flex-grow: 0;
+  max-width: 100%;
+  position: relative;
+  padding-top: 49px;
+  padding-left: 68.55px;
+  padding-right: 54px;
+
+  
+
+  @media (min-width: 900px) {
+    flex-basis: 50%;
+    flex-grow: 0;
+    max-width: 50%;
+    background-color: #f0f2f5;
+    height: 100vh;
+  }
 `;
 
 export const Header = styled.div`

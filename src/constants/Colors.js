@@ -11,6 +11,8 @@ const Colors = {
     grey4: '#E0E0E0',
     grey5: '#F2F2F2',
     grey6: '#B8B8B8',
+    grey7: '#5A5A5A',
+    grey8: '#EAECF2',
     greyOutline: '#bbb',
     success: '#00c851',
     error: '#ff3d00',
@@ -141,6 +143,7 @@ const Colors = {
     blueA400: '#2979ff',
     blueA700: '#2962ff',
 
+    lightBlue: '#51CBFF',
     lightBlue50: '#e1f5fe',
     lightBlue100: '#b3e5fc',
     lightBlue200: '#81d4fa',
@@ -323,6 +326,11 @@ const Colors = {
     grey700: '#616161',
     grey800: '#424242',
     grey900: '#212121',
+
+    glased: 'rgba(255, 242, 242, 0.13)',
+
+    lightBlue02:'#1B2B65',
+    whatsApp: '#64B161'
 };
 
 export default Colors;

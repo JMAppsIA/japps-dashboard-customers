@@ -14,4 +14,8 @@ export const Button = styled.button`
     padding: 0 10px;
     border-radius: 100px;
     z-index: 2;
+
+    @media (max-width: 535px) {
+        right: -3px;
+    }
 `;

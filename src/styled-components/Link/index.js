@@ -1,8 +1,10 @@
+import {Link} from "react-router-dom";
+
 import styled from "styled-components";
 import Colors from "../../constants/Colors";
 import Fonts from "../../constants/Fonts";
 
-export const Link = styled.a`
+export const ClickableInfo = styled.a`
   /* default black */
   color: ${(props) => props.color || Colors.black};
   /* default 16px */
@@ -15,6 +17,9 @@ export const Link = styled.a`
     switch(true) {
       case uppercase: {
         return { textTransform: 'uppercase'}
+      }
+      default: {
+        return ``;
       }
     }
   }}
@@ -118,6 +123,9 @@ export const Link = styled.a`
       case h6: {
         return { fontWeight: '400', fontSize: `${13}px` };
       }
+      default: {
+        return ``;
+      }
     }
   }}
   ${({ hero, title1, title2, title3, body, button, header }) => {
@@ -168,6 +176,9 @@ export const Link = styled.a`
           fontSize: `${12}px`,
           lineHeight: `${12*2}px`,
         };
+      }
+      default: {
+        return ``;
       }
     }
   }}

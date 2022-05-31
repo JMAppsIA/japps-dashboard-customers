@@ -14,6 +14,9 @@ export const Text = styled.span`
       case uppercase: {
         return { textTransform: 'uppercase'}
       }
+      default: {
+        return ``;
+      }
     }
   }}
   ${({
@@ -116,9 +119,12 @@ export const Text = styled.span`
       case h6: {
         return { fontSize: `${13}px` };
       }
+      default: {
+        return ``;
+      }
     }
   }}
-  ${({ hero, title1, title2, title3, body, button, header }) => {
+  ${({ hero, title1, title2, title3, body, button, header, logo, item}) => {
     switch (true) {
       case hero: {
         return {
@@ -166,6 +172,23 @@ export const Text = styled.span`
           fontSize: `${12}px`,
           lineHeight: `${12*2}px`,
         };
+      }
+      case logo: {
+        return {
+          fontWeight: 800,
+          fontSize: 24,
+          lineHeight: 29
+        };
+      }
+      case item: {
+        return {
+          fonteight: 400,
+          fontSize: 18,
+          lineHeight: 21
+        }
+      }
+      default: {
+        return ``;
       }
     }
   }}
